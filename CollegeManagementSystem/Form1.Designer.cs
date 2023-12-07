@@ -230,6 +230,7 @@
             this.upgradeSemesterToolStripMenuItem.Name = "upgradeSemesterToolStripMenuItem";
             this.upgradeSemesterToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.upgradeSemesterToolStripMenuItem.Text = "Upgrade Semester";
+            this.upgradeSemesterToolStripMenuItem.Click += new System.EventHandler(this.upgradeSemesterToolStripMenuItem_Click);
             // 
             // feesToolStripMenuItem
             // 

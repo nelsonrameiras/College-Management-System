@@ -60,6 +60,12 @@
     <Compile Include="FormNewAdmission.Designer.cs">
       <DependentUpon>FormNewAdmission.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpgradeSemester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpgradeSemester.Designer.cs">
+      <DependentUpon>FormUpgradeSemester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -68,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewAdmission.resx">
       <DependentUpon>FormNewAdmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpgradeSemester.resx">
+      <DependentUpon>FormUpgradeSemester.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

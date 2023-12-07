@@ -44,5 +44,11 @@ namespace CollegeManagementSystem
             FormNewAdmission formNewAdmission = new FormNewAdmission();
             formNewAdmission.Show();
         }
+
+        private void upgradeSemesterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUpgradeSemester formUpgradeSemester = new FormUpgradeSemester();
+            formUpgradeSemester.Show();
+        }
     }
 }

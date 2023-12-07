@@ -41,7 +41,7 @@
             this.schoolNameLabel = new System.Windows.Forms.Label();
             this.durationYearLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.motherNameTextBox = new System.Windows.Forms.TextBox();
@@ -164,7 +164,7 @@
             // 
             this.schoolNameLabel.AutoSize = true;
             this.schoolNameLabel.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schoolNameLabel.Location = new System.Drawing.Point(561, 295);
+            this.schoolNameLabel.Location = new System.Drawing.Point(561, 281);
             this.schoolNameLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.schoolNameLabel.Name = "schoolNameLabel";
             this.schoolNameLabel.Size = new System.Drawing.Size(122, 22);
@@ -193,16 +193,16 @@
             this.addressLabel.TabIndex = 11;
             this.addressLabel.Text = "Address:";
             // 
-            // label13
+            // titleLabel
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(383, 27);
-            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(323, 66);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Admissions";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Montserrat ExtraBold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Location = new System.Drawing.Point(383, 27);
+            this.titleLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(323, 66);
+            this.titleLabel.TabIndex = 13;
+            this.titleLabel.Text = "Admissions";
             // 
             // pictureBox1
             // 
@@ -254,7 +254,7 @@
             // schoolNameTextBox
             // 
             this.schoolNameTextBox.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.schoolNameTextBox.Location = new System.Drawing.Point(728, 287);
+            this.schoolNameTextBox.Location = new System.Drawing.Point(728, 278);
             this.schoolNameTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.schoolNameTextBox.Name = "schoolNameTextBox";
             this.schoolNameTextBox.Size = new System.Drawing.Size(279, 27);
@@ -264,7 +264,7 @@
             // 
             this.femaleGenderRadioButton.AutoSize = true;
             this.femaleGenderRadioButton.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.femaleGenderRadioButton.Location = new System.Drawing.Point(231, 291);
+            this.femaleGenderRadioButton.Location = new System.Drawing.Point(231, 281);
             this.femaleGenderRadioButton.Margin = new System.Windows.Forms.Padding(5);
             this.femaleGenderRadioButton.Name = "femaleGenderRadioButton";
             this.femaleGenderRadioButton.Size = new System.Drawing.Size(89, 26);
@@ -277,7 +277,7 @@
             // 
             this.maleGenderRadioButton.AutoSize = true;
             this.maleGenderRadioButton.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maleGenderRadioButton.Location = new System.Drawing.Point(374, 291);
+            this.maleGenderRadioButton.Location = new System.Drawing.Point(374, 281);
             this.maleGenderRadioButton.Margin = new System.Windows.Forms.Padding(5);
             this.maleGenderRadioButton.Name = "maleGenderRadioButton";
             this.maleGenderRadioButton.Size = new System.Drawing.Size(67, 26);
@@ -331,7 +331,7 @@
             "R",
             "Assembly",
             "Prolog"});
-            this.programmingComboBox.Location = new System.Drawing.Point(728, 237);
+            this.programmingComboBox.Location = new System.Drawing.Point(728, 229);
             this.programmingComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.programmingComboBox.Name = "programmingComboBox";
             this.programmingComboBox.Size = new System.Drawing.Size(279, 30);
@@ -377,7 +377,7 @@
             // 
             // resetButton
             // 
-            this.resetButton.BackColor = System.Drawing.Color.DodgerBlue;
+            this.resetButton.BackColor = System.Drawing.Color.Crimson;
             this.resetButton.Location = new System.Drawing.Point(565, 587);
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(136, 44);
@@ -417,7 +417,7 @@
             this.Controls.Add(this.emailIdTextBox);
             this.Controls.Add(this.motherNameTextBox);
             this.Controls.Add(this.fullNameTextBox);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.durationYearLabel);
@@ -432,6 +432,7 @@
             this.Controls.Add(this.fullNameLabel);
             this.Controls.Add(this.registrationNumberLabel);
             this.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormNewAdmission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -458,7 +459,7 @@
         private System.Windows.Forms.Label durationYearLabel;
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.TextBox motherNameTextBox;
         private System.Windows.Forms.TextBox emailIdTextBox;
