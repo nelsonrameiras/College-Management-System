@@ -45,18 +45,18 @@
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.admissionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newAdmissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.upgradeSemesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pupilDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchPupilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.individualDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addProfessorInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disenrollPupilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newAdmissionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.upgradeSemesterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchPupilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.individualDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addProfessorInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -218,6 +218,19 @@
             this.admissionsToolStripMenuItem.Text = "Admissions";
             this.admissionsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // newAdmissionToolStripMenuItem
+            // 
+            this.newAdmissionToolStripMenuItem.Name = "newAdmissionToolStripMenuItem";
+            this.newAdmissionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.newAdmissionToolStripMenuItem.Text = "New Admission";
+            this.newAdmissionToolStripMenuItem.Click += new System.EventHandler(this.newAdmissionToolStripMenuItem_Click);
+            // 
+            // upgradeSemesterToolStripMenuItem
+            // 
+            this.upgradeSemesterToolStripMenuItem.Name = "upgradeSemesterToolStripMenuItem";
+            this.upgradeSemesterToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.upgradeSemesterToolStripMenuItem.Text = "Upgrade Semester";
+            // 
             // feesToolStripMenuItem
             // 
             this.feesToolStripMenuItem.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,6 +254,18 @@
             this.pupilDetailsToolStripMenuItem.Text = "Pupil Details";
             this.pupilDetailsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
+            // searchPupilToolStripMenuItem
+            // 
+            this.searchPupilToolStripMenuItem.Name = "searchPupilToolStripMenuItem";
+            this.searchPupilToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.searchPupilToolStripMenuItem.Text = "Search Pupil";
+            // 
+            // individualDetailsToolStripMenuItem
+            // 
+            this.individualDetailsToolStripMenuItem.Name = "individualDetailsToolStripMenuItem";
+            this.individualDetailsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.individualDetailsToolStripMenuItem.Text = "Individual Details";
+            // 
             // professorsToolStripMenuItem
             // 
             this.professorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -253,6 +278,18 @@
             this.professorsToolStripMenuItem.Size = new System.Drawing.Size(83, 84);
             this.professorsToolStripMenuItem.Text = "Professors";
             this.professorsToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // addProfessorInformationToolStripMenuItem
+            // 
+            this.addProfessorInformationToolStripMenuItem.Name = "addProfessorInformationToolStripMenuItem";
+            this.addProfessorInformationToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.addProfessorInformationToolStripMenuItem.Text = "Add Professor Information";
+            // 
+            // searchToolStripMenuItem
+            // 
+            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
+            this.searchToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.searchToolStripMenuItem.Text = "Search";
             // 
             // disenrollPupilToolStripMenuItem
             // 
@@ -283,42 +320,6 @@
             this.exitSoftwareToolStripMenuItem.Size = new System.Drawing.Size(98, 84);
             this.exitSoftwareToolStripMenuItem.Text = "Exit Software";
             this.exitSoftwareToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            // 
-            // newAdmissionToolStripMenuItem
-            // 
-            this.newAdmissionToolStripMenuItem.Name = "newAdmissionToolStripMenuItem";
-            this.newAdmissionToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.newAdmissionToolStripMenuItem.Text = "New Admission";
-            // 
-            // upgradeSemesterToolStripMenuItem
-            // 
-            this.upgradeSemesterToolStripMenuItem.Name = "upgradeSemesterToolStripMenuItem";
-            this.upgradeSemesterToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.upgradeSemesterToolStripMenuItem.Text = "Upgrade Semester";
-            // 
-            // searchPupilToolStripMenuItem
-            // 
-            this.searchPupilToolStripMenuItem.Name = "searchPupilToolStripMenuItem";
-            this.searchPupilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.searchPupilToolStripMenuItem.Text = "Search Pupil";
-            // 
-            // individualDetailsToolStripMenuItem
-            // 
-            this.individualDetailsToolStripMenuItem.Name = "individualDetailsToolStripMenuItem";
-            this.individualDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.individualDetailsToolStripMenuItem.Text = "Individual Details";
-            // 
-            // addProfessorInformationToolStripMenuItem
-            // 
-            this.addProfessorInformationToolStripMenuItem.Name = "addProfessorInformationToolStripMenuItem";
-            this.addProfessorInformationToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.addProfessorInformationToolStripMenuItem.Text = "Add Professor Information";
-            // 
-            // searchToolStripMenuItem
-            // 
-            this.searchToolStripMenuItem.Name = "searchToolStripMenuItem";
-            this.searchToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.searchToolStripMenuItem.Text = "Search";
             // 
             // Form1
             // 

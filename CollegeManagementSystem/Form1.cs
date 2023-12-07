@@ -38,5 +38,11 @@ namespace CollegeManagementSystem
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void newAdmissionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewAdmission formNewAdmission = new FormNewAdmission();
+            formNewAdmission.Show();
+        }
     }
 }
