@@ -16,5 +16,27 @@ namespace CollegeManagementSystem
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            menuStrip.Visible = false;
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            string username = usernameTextBox.Text;
+            string password = passwordTextBox.Text;
+
+            if(username == "admin" &&  password == "admin")
+            {
+                menuStrip.Visible = true;
+                loginPanel.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Either the password you entered is not valid, or that User is not registered in our database. Please, retry.", 
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
