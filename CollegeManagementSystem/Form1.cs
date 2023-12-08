@@ -50,5 +50,17 @@ namespace CollegeManagementSystem
             FormUpgradeSemester formUpgradeSemester = new FormUpgradeSemester();
             formUpgradeSemester.Show();
         }
+
+        private void feesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormFees formFees = new FormFees();
+            formFees.Show();
+        }
+
+        private void searchPupilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSearchStudent formSearchStudent = new FormSearchStudent();
+            formSearchStudent.Show();
+        }
     }
 }

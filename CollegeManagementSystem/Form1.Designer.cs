@@ -241,6 +241,7 @@
             this.feesToolStripMenuItem.Size = new System.Drawing.Size(76, 84);
             this.feesToolStripMenuItem.Text = "Fees";
             this.feesToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.feesToolStripMenuItem.Click += new System.EventHandler(this.feesToolStripMenuItem_Click);
             // 
             // pupilDetailsToolStripMenuItem
             // 
@@ -258,13 +259,14 @@
             // searchPupilToolStripMenuItem
             // 
             this.searchPupilToolStripMenuItem.Name = "searchPupilToolStripMenuItem";
-            this.searchPupilToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.searchPupilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.searchPupilToolStripMenuItem.Text = "Search Pupil";
+            this.searchPupilToolStripMenuItem.Click += new System.EventHandler(this.searchPupilToolStripMenuItem_Click);
             // 
             // individualDetailsToolStripMenuItem
             // 
             this.individualDetailsToolStripMenuItem.Name = "individualDetailsToolStripMenuItem";
-            this.individualDetailsToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.individualDetailsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.individualDetailsToolStripMenuItem.Text = "Individual Details";
             // 
             // professorsToolStripMenuItem
