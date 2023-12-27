@@ -89,9 +89,12 @@
             // 
             // studentsDataGridView
             // 
+            this.studentsDataGridView.AllowUserToAddRows = false;
+            this.studentsDataGridView.AllowUserToDeleteRows = false;
             this.studentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.studentsDataGridView.Location = new System.Drawing.Point(33, 233);
             this.studentsDataGridView.Name = "studentsDataGridView";
+            this.studentsDataGridView.ReadOnly = true;
             this.studentsDataGridView.Size = new System.Drawing.Size(588, 254);
             this.studentsDataGridView.TabIndex = 5;
             // 

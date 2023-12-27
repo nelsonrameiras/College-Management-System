@@ -33,6 +33,7 @@ namespace CollegeManagementSystem
             adapter.Fill(dataset);
 
             studentsDataGridView.DataSource = dataset.Tables[0];
+            studentsDataGridView.ReadOnly = true;
 
             cnn.Close();
         }
@@ -44,6 +45,7 @@ namespace CollegeManagementSystem
                 MessageBox.Show("Please Enter a Registration Number. Otherwise, the query cannot procede.", "Unsuccessful.",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 FormSearchStudent_Load(sender, e);
+                studentsDataGridView.ReadOnly = true;
             }
             else
             {
@@ -59,6 +61,7 @@ namespace CollegeManagementSystem
                 adapter.Fill(dataset);
 
                 studentsDataGridView.DataSource = dataset.Tables[0];
+                studentsDataGridView.ReadOnly = true;
             }
         }
     }

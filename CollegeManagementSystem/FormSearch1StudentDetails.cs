@@ -32,7 +32,7 @@ namespace CollegeManagementSystem
             DataSet dataset = new DataSet();
             adapter.Fill(dataset);
 
-            if(dataset.Tables[0].Rows.Count != 0)
+            if(dataset.Tables[0].Rows.Count != 0 && registrationIdTextBox.Text.Length != 0)
             {
                 fullNamePlaceHolderLabel.Text = dataset.Tables[0].Rows[0][1].ToString();
                 motherNamePlaceHolderLabel.Text = dataset.Tables[0].Rows[0][2].ToString();
@@ -51,18 +51,7 @@ namespace CollegeManagementSystem
                 MessageBox.Show("That Student Registration ID is invalid. Please, enter a valid NAID.",
                     "Invalid Registration ID",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                registrationIdTextBox.Clear();
-                fullNamePlaceHolderLabel.Text = "______________________";
-                motherNamePlaceHolderLabel.Text = "______________________";
-                genderPlaceHolderLabel.Text = "______________________";
-                dateOfBirthPlaceHolderLabel.Text = "______________________";
-                mobileNumberPlaceHolderLabel.Text = "______________________";
-                emailIdPlaceHolderLabel.Text = "______________________";
-                semesterPlaceHolderLabel.Text = "______________________";
-                programmingLanguagePlaceHolderLabel.Text = "______________________";
-                schoolNamePlaceHolderLabel.Text = "______________________";
-                durationPlaceHolderLabel.Text = "______________________";
-                addressPlaceHolderLabel.Text = "______________________";
+                resetButton_Click(sender, e);
             }
         }
 

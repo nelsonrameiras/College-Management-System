@@ -33,34 +33,58 @@ namespace CollegeManagementSystem
             adapter.Fill(dataset);
 
             deleteStudentRecordDataGridView.DataSource = dataset.Tables[0];
+            deleteStudentRecordDataGridView.ReadOnly = true;
 
             cnn.Close();
         }
 
         private void deleteStudentRecordButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to Disenroll this Student?","Sure?",
-                MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            SqlConnection cnn2 = new SqlConnection();
+            cnn2.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.Connection = cnn2;
+
+            cmd2.CommandText = $"SELECT * FROM NewAdmission WHERE NAID = '{registrationIdTextBox.Text}';";
+
+            SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+            DataSet dataset2 = new DataSet();
+            adapter2.Fill(dataset2);
+
+            if (dataset2.Tables[0].Rows.Count != 0)
             {
-                SqlConnection cnn = new SqlConnection();
-                cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cnn;
+                if (MessageBox.Show("Are you sure you want to Disenroll this Student?", "Sure?",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    SqlConnection cnn = new SqlConnection();
+                    cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cnn;
 
-                cmd.CommandText = $"DELETE FROM NewAdmission WHERE NAID = '{registrationIdTextBox.Text}'";
+                    cmd.CommandText = $"DELETE FROM NewAdmission WHERE NAID = '{registrationIdTextBox.Text}'";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                DataSet dataset = new DataSet();
-                adapter.Fill(dataset);
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataSet dataset = new DataSet();
+                    adapter.Fill(dataset);
 
-                MessageBox.Show($"The student with Registration Id {registrationIdTextBox.Text} has successfully been disenrolled.",
-                    "Successfully Disenrolled.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"The student with Registration Id {registrationIdTextBox.Text} has successfully been disenrolled.",
+                        "Successfully Disenrolled.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                FormDisenrollStudent_Load(sender, e);
+                    FormDisenrollStudent_Load(sender, e);
+                }
+                else
+                {
+                    registrationIdTextBox.Clear();
+                    FormDisenrollStudent_Load(sender, e);
+                }
             }
-            else {
-                FormDisenrollStudent_Load(sender, e);
+            else
+            { 
+                MessageBox.Show("That Pupil does not exist. Please enter a valid Registration ID.", "Enter a valid NAID.",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                registrationIdTextBox.Clear();
             }
+
         }
     }
 }

@@ -37,25 +37,28 @@ namespace CollegeManagementSystem
 
                 if (dataset.Tables[0].Rows.Count != 0 ) 
                 {
+                    warningLabel.Visible = false;
                     fullNamePlaceHolderLabel.Text = dataset.Tables[0].Rows[0][0].ToString();
                     motherNamePlaceHolderLabel.Text = dataset.Tables[0].Rows[0][1].ToString();
                     durationPlaceHolderLabel.Text = dataset.Tables[0].Rows[0][2].ToString();
                 }
                 else
                 {
-                    fullNamePlaceHolderLabel.Text = "______________________";
-                    motherNamePlaceHolderLabel.Text = "______________________";
-                    durationPlaceHolderLabel.Text = "______________________";
+                    warningLabel.Visible = true;
+                    fullNamePlaceHolderLabel.Text = "_________________________________";
+                    motherNamePlaceHolderLabel.Text = "_________________________________";
+                    durationPlaceHolderLabel.Text = "_________________________________";
                 }
 
                 cnn.Close();
             }
             else
             {
+                warningLabel.Visible = false;
                 registrationNumberTextBox.Text = "";
-                fullNamePlaceHolderLabel.Text = "______________________";
-                motherNamePlaceHolderLabel.Text = "______________________";
-                durationPlaceHolderLabel.Text = "______________________";
+                fullNamePlaceHolderLabel.Text = "_________________________________";
+                motherNamePlaceHolderLabel.Text = "_________________________________";
+                durationPlaceHolderLabel.Text = "_________________________________";
                 feesTextBox.Text = "";
             }
         }

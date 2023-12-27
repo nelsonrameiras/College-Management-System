@@ -41,13 +41,14 @@
             this.durationPlaceHolderLabel = new System.Windows.Forms.Label();
             this.feesTextBox = new System.Windows.Forms.TextBox();
             this.submitFeesButton = new System.Windows.Forms.Button();
+            this.warningLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(143, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(190, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(191, 161);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -103,7 +104,7 @@
             // 
             this.registrationNumberTextBox.Location = new System.Drawing.Point(254, 203);
             this.registrationNumberTextBox.Name = "registrationNumberTextBox";
-            this.registrationNumberTextBox.Size = new System.Drawing.Size(184, 27);
+            this.registrationNumberTextBox.Size = new System.Drawing.Size(270, 27);
             this.registrationNumberTextBox.TabIndex = 6;
             this.registrationNumberTextBox.TextChanged += new System.EventHandler(this.registrationNumberTextBox_TextChanged);
             // 
@@ -112,39 +113,39 @@
             this.fullNamePlaceHolderLabel.AutoSize = true;
             this.fullNamePlaceHolderLabel.Location = new System.Drawing.Point(250, 253);
             this.fullNamePlaceHolderLabel.Name = "fullNamePlaceHolderLabel";
-            this.fullNamePlaceHolderLabel.Size = new System.Drawing.Size(186, 22);
+            this.fullNamePlaceHolderLabel.Size = new System.Drawing.Size(274, 22);
             this.fullNamePlaceHolderLabel.TabIndex = 7;
-            this.fullNamePlaceHolderLabel.Text = "______________________";
+            this.fullNamePlaceHolderLabel.Text = "_________________________________";
             // 
             // motherNamePlaceHolderLabel
             // 
             this.motherNamePlaceHolderLabel.AutoSize = true;
             this.motherNamePlaceHolderLabel.Location = new System.Drawing.Point(250, 310);
             this.motherNamePlaceHolderLabel.Name = "motherNamePlaceHolderLabel";
-            this.motherNamePlaceHolderLabel.Size = new System.Drawing.Size(186, 22);
+            this.motherNamePlaceHolderLabel.Size = new System.Drawing.Size(274, 22);
             this.motherNamePlaceHolderLabel.TabIndex = 8;
-            this.motherNamePlaceHolderLabel.Text = "______________________";
+            this.motherNamePlaceHolderLabel.Text = "_________________________________";
             // 
             // durationPlaceHolderLabel
             // 
             this.durationPlaceHolderLabel.AutoSize = true;
             this.durationPlaceHolderLabel.Location = new System.Drawing.Point(250, 359);
             this.durationPlaceHolderLabel.Name = "durationPlaceHolderLabel";
-            this.durationPlaceHolderLabel.Size = new System.Drawing.Size(186, 22);
+            this.durationPlaceHolderLabel.Size = new System.Drawing.Size(274, 22);
             this.durationPlaceHolderLabel.TabIndex = 9;
-            this.durationPlaceHolderLabel.Text = "______________________";
+            this.durationPlaceHolderLabel.Text = "_________________________________";
             // 
             // feesTextBox
             // 
             this.feesTextBox.Location = new System.Drawing.Point(252, 406);
             this.feesTextBox.Name = "feesTextBox";
-            this.feesTextBox.Size = new System.Drawing.Size(184, 27);
+            this.feesTextBox.Size = new System.Drawing.Size(272, 27);
             this.feesTextBox.TabIndex = 10;
             // 
             // submitFeesButton
             // 
             this.submitFeesButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.submitFeesButton.Location = new System.Drawing.Point(203, 452);
+            this.submitFeesButton.Location = new System.Drawing.Point(241, 452);
             this.submitFeesButton.Name = "submitFeesButton";
             this.submitFeesButton.Size = new System.Drawing.Size(82, 37);
             this.submitFeesButton.TabIndex = 11;
@@ -152,12 +153,24 @@
             this.submitFeesButton.UseVisualStyleBackColor = false;
             this.submitFeesButton.Click += new System.EventHandler(this.submitFeesButton_Click);
             // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.ForeColor = System.Drawing.Color.Red;
+            this.warningLabel.Location = new System.Drawing.Point(254, 237);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(224, 22);
+            this.warningLabel.TabIndex = 12;
+            this.warningLabel.Text = "That NAID isn\'t registered.";
+            this.warningLabel.Visible = false;
+            // 
             // FormFees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(494, 501);
+            this.ClientSize = new System.Drawing.Size(570, 501);
+            this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.submitFeesButton);
             this.Controls.Add(this.feesTextBox);
             this.Controls.Add(this.durationPlaceHolderLabel);
@@ -196,5 +209,6 @@
         private System.Windows.Forms.Label durationPlaceHolderLabel;
         private System.Windows.Forms.TextBox feesTextBox;
         private System.Windows.Forms.Button submitFeesButton;
+        private System.Windows.Forms.Label warningLabel;
     }
 }
