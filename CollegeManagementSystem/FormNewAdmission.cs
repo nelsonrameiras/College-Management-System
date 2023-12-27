@@ -66,33 +66,31 @@ namespace CollegeManagementSystem
             if (name == "" || mname == "" || (maleGenderRadioButton.Checked == false &&
                femaleGenderRadioButton.Checked == false) || dateOfBirthDateTimePicker.Checked == false ||
                emailId == "" || semesterComboBox.SelectedIndex == -1 || programmingComboBox.SelectedIndex == -1 ||
-               durationYearComboBox.SelectedIndex == -1 || address == "")
+               schoolName == "" || durationYearComboBox.SelectedIndex == -1 || address == "")
             {
                 MessageBox.Show("At least one of the fields must not have been entered properly or at all. Please, correct that and try again!",
                     "Unsuccessful. Try again.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                SqlConnection cnn = new SqlConnection();
+                cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cnn;
 
+                cmd.CommandText = $"INSERT INTO Teachers (fullName,motherName,gender,dateOfBirth,mobileNumber," +
+                    "email,semester,programmingLanguage,schoolName,duration,addresss) values " +
+                    $"('{name}','{mname}','{gender}','{dateOfBirth}','{mobileNumber}','{emailId}'," +
+                    $"'{semester}','{programmingLanguage}','{schoolName}','{duration}','{address}')";
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset);
+                cnn.Close();
+
+                MessageBox.Show("The Admission has been submitted. Please, remember the Registration ID.",
+                    "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            SqlConnection cnn = new SqlConnection();
-            cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cnn;
-
-            cmd.CommandText = "INSERT INTO NewAdmission (fullName,motherName,gender,dateOfBirth,mobileNumber," +
-                "email,semester,programmingLanguage,schoolName,duration,addresss) values " +
-                "('" + name + "','" + mname + "','" + gender + "','" + dateOfBirth + "','" + mobileNumber + "','" + emailId + "'," +
-                "'" + semester + "','" + programmingLanguage + "','" + schoolName + "','" + duration + "','" + address + "')";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataSet dataset = new DataSet();
-            adapter.Fill(dataset);
-            cnn.Close();
-
-            MessageBox.Show("The Admission has been submitted. Please, remember the Registration ID.",
-                "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
