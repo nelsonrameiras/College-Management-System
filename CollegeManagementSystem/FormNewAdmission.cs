@@ -78,7 +78,7 @@ namespace CollegeManagementSystem
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = cnn;
 
-                cmd.CommandText = $"INSERT INTO Teachers (fullName,motherName,gender,dateOfBirth,mobileNumber," +
+                cmd.CommandText = $"INSERT INTO NewAdmission (fullName,motherName,gender,dateOfBirth,mobileNumber," +
                     "email,semester,programmingLanguage,schoolName,duration,addresss) values " +
                     $"('{name}','{mname}','{gender}','{dateOfBirth}','{mobileNumber}','{emailId}'," +
                     $"'{semester}','{programmingLanguage}','{schoolName}','{duration}','{address}')";

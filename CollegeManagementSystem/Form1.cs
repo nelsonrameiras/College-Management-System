@@ -74,5 +74,32 @@ namespace CollegeManagementSystem
             FormNewTeacher formNewTeacher = new FormNewTeacher();
             formNewTeacher.Show();
         }
+
+        private void teachersIndividualDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSearch1TeacherDetails formSearch1TeacherDetails = new FormSearch1TeacherDetails();
+            formSearch1TeacherDetails.Show();
+        }
+
+        private void disenrollPupilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDisenrollStudent formDisenrollStudent = new FormDisenrollStudent();
+            formDisenrollStudent.Show();
+        }
+
+        private void aboutUsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAbout formAbout = new FormAbout();
+            formAbout.Show();
+        }
+
+        private void exitSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to close this Software? Any unsaved data shall be lost.",
+                "Are you certain",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
     }
 }
