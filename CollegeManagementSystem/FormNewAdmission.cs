@@ -63,6 +63,19 @@ namespace CollegeManagementSystem
             string duration = durationYearComboBox.Text;
             string address = addressRichTextBox.Text;
 
+            if (name == "" || mname == "" || (maleGenderRadioButton.Checked == false &&
+               femaleGenderRadioButton.Checked == false) || dateOfBirthDateTimePicker.Checked == false ||
+               emailId == "" || semesterComboBox.SelectedIndex == -1 || programmingComboBox.SelectedIndex == -1 ||
+               durationYearComboBox.SelectedIndex == -1 || address == "")
+            {
+                MessageBox.Show("At least one of the fields must not have been entered properly or at all. Please, correct that and try again!",
+                    "Unsuccessful. Try again.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+
+            }
+
             SqlConnection cnn = new SqlConnection();
             cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
             SqlCommand cmd = new SqlCommand();
@@ -79,7 +92,7 @@ namespace CollegeManagementSystem
             cnn.Close();
 
             MessageBox.Show("The Admission has been submitted. Please, remember the Registration ID.",
-                "Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -91,10 +104,10 @@ namespace CollegeManagementSystem
             femaleGenderRadioButton.Checked = false;
             mobileNumberTextBox.Clear();
             emailIdTextBox.Clear();
-            semesterComboBox.ResetText();
-            programmingComboBox.ResetText();
+            semesterComboBox.Text = "-- Choose an Option --";
+            programmingComboBox.Text = "-- Choose an Option --";
             schoolNameTextBox.Clear();
-            durationYearComboBox.ResetText();
+            durationYearComboBox.Text = "-- Choose an Option --";
             addressRichTextBox.Clear();
         }
     }

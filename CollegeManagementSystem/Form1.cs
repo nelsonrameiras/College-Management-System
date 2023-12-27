@@ -62,5 +62,17 @@ namespace CollegeManagementSystem
             FormSearchStudent formSearchStudent = new FormSearchStudent();
             formSearchStudent.Show();
         }
+
+        private void individualDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSearch1StudentDetails formSearch1StudentDetails = new FormSearch1StudentDetails();
+            formSearch1StudentDetails.Show();
+        }
+
+        private void addProfessorInformationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNewTeacher formNewTeacher = new FormNewTeacher();
+            formNewTeacher.Show();
+        }
     }
 }

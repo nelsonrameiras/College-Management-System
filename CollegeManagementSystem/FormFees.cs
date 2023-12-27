@@ -68,24 +68,25 @@ namespace CollegeManagementSystem
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = cnn;
 
-            cmd.CommandText = $"SELECT fullname,mothername,duration FROM NewAdmission where NAID = {registrationNumberTextBox.Text}";
+            cmd.CommandText = $"SELECT * FROM Fees WHERE NAID = "+registrationNumberTextBox.Text+"";
 
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             DataSet dataset = new DataSet();
             adapter.Fill(dataset);
 
-            if (dataset.Tables[0].Rows.Count == 0 )
+            if (dataset.Tables[0].Rows.Count == 0)
             {
                 SqlConnection cnn2 = new SqlConnection();
                 cnn2.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
                 SqlCommand cmd2 = new SqlCommand();
                 cmd2.Connection = cnn2;
 
-                cmd2.CommandText = $"INSERT INTO Fees (NAID, fees) VALUES ({registrationNumberTextBox.Text},{feesTextBox.Text})";
+                cmd2.CommandText = $"INSERT INTO Fees (NAID, fees) VALUES ({registrationNumberTextBox.Text}," +
+                    $"{feesTextBox.Text})";
 
-                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd);
+                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
                 DataSet dataset2 = new DataSet();
-                adapter.Fill(dataset);
+                adapter2.Fill(dataset2);
 
                 if (MessageBox.Show("The fee submition was successful.", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)

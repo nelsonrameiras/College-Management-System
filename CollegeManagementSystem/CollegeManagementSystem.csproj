@@ -58,7 +58,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -117,6 +117,18 @@
     <Compile Include="FormNewAdmission.Designer.cs">
       <DependentUpon>FormNewAdmission.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNewTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNewTeacher.Designer.cs">
+      <DependentUpon>FormNewTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearch1StudentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearch1StudentDetails.Designer.cs">
+      <DependentUpon>FormSearch1StudentDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNewAdmission.resx">
       <DependentUpon>FormNewAdmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNewTeacher.resx">
+      <DependentUpon>FormNewTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearch1StudentDetails.resx">
+      <DependentUpon>FormSearch1StudentDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchStudent.resx">
       <DependentUpon>FormSearchStudent.cs</DependentUpon>
