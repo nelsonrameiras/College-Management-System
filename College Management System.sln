@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.txt = README.txt
 	EndProjectSection
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CollegeDBE", "..\..\..\Desktop\College-Management-System\CollegeDBE\CollegeDBE.sqlproj", "{F35B0378-BA7C-4BA2-97D7-B25EF119B316}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CollegeDB", "CollegeDB\CollegeDB.sqlproj", "{CFC1B5FC-7420-40C4-91F6-B069D70F0687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeManagementSystemNoSQL", "CollegeManagementSystemNoSQL\CollegeManagementSystemNoSQL.csproj", "{D19514EB-7336-4CB9-B91F-EBF34A6A385E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,18 +24,16 @@ Global
 		{28FD3599-CB30-4D8E-98AC-6511B6F26021}.Debug|Any CPU.Build.0 = Debug|x64
 		{28FD3599-CB30-4D8E-98AC-6511B6F26021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FD3599-CB30-4D8E-98AC-6511B6F26021}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F35B0378-BA7C-4BA2-97D7-B25EF119B316}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CFC1B5FC-7420-40C4-91F6-B069D70F0687}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D19514EB-7336-4CB9-B91F-EBF34A6A385E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D19514EB-7336-4CB9-B91F-EBF34A6A385E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D19514EB-7336-4CB9-B91F-EBF34A6A385E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D19514EB-7336-4CB9-B91F-EBF34A6A385E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

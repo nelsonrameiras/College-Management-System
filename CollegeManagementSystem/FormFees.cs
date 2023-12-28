@@ -95,9 +95,9 @@ namespace CollegeManagementSystem
                     MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
                 {
                     registrationNumberTextBox.Text = "";
-                    fullNamePlaceHolderLabel.Text = "______________________";
-                    motherNamePlaceHolderLabel.Text = "______________________";
-                    durationPlaceHolderLabel.Text = "______________________";
+                    fullNamePlaceHolderLabel.Text = "_________________________________";
+                    motherNamePlaceHolderLabel.Text = "_________________________________";
+                    durationPlaceHolderLabel.Text = "_________________________________";
                     feesTextBox.Text = "";
                 }
 

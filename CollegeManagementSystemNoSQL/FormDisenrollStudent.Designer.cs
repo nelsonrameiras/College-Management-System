@@ -89,12 +89,9 @@
             // 
             // deleteStudentRecordDataGridView
             // 
-            this.deleteStudentRecordDataGridView.AllowUserToAddRows = false;
-            this.deleteStudentRecordDataGridView.AllowUserToDeleteRows = false;
             this.deleteStudentRecordDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deleteStudentRecordDataGridView.Location = new System.Drawing.Point(37, 258);
             this.deleteStudentRecordDataGridView.Name = "deleteStudentRecordDataGridView";
-            this.deleteStudentRecordDataGridView.ReadOnly = true;
             this.deleteStudentRecordDataGridView.Size = new System.Drawing.Size(582, 223);
             this.deleteStudentRecordDataGridView.TabIndex = 5;
             // 
