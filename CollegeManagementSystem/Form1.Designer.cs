@@ -34,6 +34,7 @@
             this.titleLabel2 = new System.Windows.Forms.Label();
             this.titleLabel3 = new System.Windows.Forms.Label();
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.registerButton = new System.Windows.Forms.Button();
             this.loginButton = new System.Windows.Forms.Button();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
@@ -58,7 +59,6 @@
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
-            this.registerButton = new System.Windows.Forms.Button();
             this.heyLabel = new System.Windows.Forms.Label();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,6 +111,17 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(334, 178);
             this.loginPanel.TabIndex = 3;
+            // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.Crimson;
+            this.registerButton.Location = new System.Drawing.Point(208, 135);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(90, 31);
+            this.registerButton.TabIndex = 7;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // loginButton
             // 
@@ -333,26 +344,15 @@
             this.exitSoftwareToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.exitSoftwareToolStripMenuItem.Click += new System.EventHandler(this.exitSoftwareToolStripMenuItem_Click);
             // 
-            // registerButton
-            // 
-            this.registerButton.BackColor = System.Drawing.Color.Crimson;
-            this.registerButton.Location = new System.Drawing.Point(208, 135);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(90, 31);
-            this.registerButton.TabIndex = 7;
-            this.registerButton.Text = "Register";
-            this.registerButton.UseVisualStyleBackColor = false;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
-            // 
             // heyLabel
             // 
             this.heyLabel.AutoSize = true;
             this.heyLabel.BackColor = System.Drawing.Color.White;
             this.heyLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.heyLabel.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.heyLabel.Location = new System.Drawing.Point(937, 28);
+            this.heyLabel.Font = new System.Drawing.Font("Montserrat", 18.25F, System.Drawing.FontStyle.Bold);
+            this.heyLabel.Location = new System.Drawing.Point(836, 27);
             this.heyLabel.Name = "heyLabel";
-            this.heyLabel.Size = new System.Drawing.Size(82, 39);
+            this.heyLabel.Size = new System.Drawing.Size(75, 37);
             this.heyLabel.TabIndex = 5;
             this.heyLabel.Text = "Hey!";
             // 
