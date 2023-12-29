@@ -54,6 +54,8 @@
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.resetButton = new System.Windows.Forms.Button();
             this.submitButton = new System.Windows.Forms.Button();
+            this.tIdPlaceHolderLabel = new System.Windows.Forms.Label();
+            this.registrationNumberLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.infoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -349,12 +351,35 @@
             this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
+            // tIdPlaceHolderLabel
+            // 
+            this.tIdPlaceHolderLabel.AutoSize = true;
+            this.tIdPlaceHolderLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tIdPlaceHolderLabel.Location = new System.Drawing.Point(422, 90);
+            this.tIdPlaceHolderLabel.Name = "tIdPlaceHolderLabel";
+            this.tIdPlaceHolderLabel.Size = new System.Drawing.Size(57, 22);
+            this.tIdPlaceHolderLabel.TabIndex = 71;
+            this.tIdPlaceHolderLabel.Text = "label1";
+            // 
+            // registrationNumberLabel
+            // 
+            this.registrationNumberLabel.AutoSize = true;
+            this.registrationNumberLabel.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registrationNumberLabel.Location = new System.Drawing.Point(178, 90);
+            this.registrationNumberLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.registrationNumberLabel.Name = "registrationNumberLabel";
+            this.registrationNumberLabel.Size = new System.Drawing.Size(187, 22);
+            this.registrationNumberLabel.TabIndex = 72;
+            this.registrationNumberLabel.Text = "Registration Number:";
+            // 
             // FormNewTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.registrationNumberLabel);
+            this.Controls.Add(this.tIdPlaceHolderLabel);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.addressRichTextBox);
@@ -386,6 +411,7 @@
             this.Name = "FormNewTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Teacher Information";
+            this.Load += new System.EventHandler(this.FormNewTeacher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -419,5 +445,7 @@
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.Button submitButton;
+        private System.Windows.Forms.Label tIdPlaceHolderLabel;
+        private System.Windows.Forms.Label registrationNumberLabel;
     }
 }

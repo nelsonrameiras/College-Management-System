@@ -47,7 +47,7 @@ namespace CollegeManagementSystem
                 }
                 else
                 {
-                    MessageBox.Show("That Student Registration ID is invalid. Please, enter a valid NAID.",
+                    MessageBox.Show("That Teacher Registration ID is invalid. Please, enter a valid NAID.",
                         "Invalid Registration ID.",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     resetButton_Click(sender, e);

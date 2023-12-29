@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,7 @@ namespace CollegeManagementSystem
         private void Form1_Load(object sender, EventArgs e)
         {
             menuStrip.Visible = false;
+            heyLabel.Visible = false;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -27,10 +30,23 @@ namespace CollegeManagementSystem
             string username = usernameTextBox.Text;
             string password = passwordTextBox.Text;
 
-            if(username == "admin" &&  password == "admin")
+            SqlConnection cnn = new SqlConnection();
+            cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+
+            cmd.CommandText = $"SELECT [password], [fullName] FROM [dbo].[UsersLogin] WHERE [username] = '{usernameTextBox.Text}'";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset);
+
+            if (username == $"{usernameTextBox.Text}" &&  password == $"{dataset.Tables[0].Rows[0][0].ToString()}")
             {
                 menuStrip.Visible = true;
                 loginPanel.Visible = false;
+                heyLabel.Visible = true;
+                heyLabel.Text = $"Hey, {dataset.Tables[0].Rows[0][1].ToString()}.";
             }
             else
             {
@@ -100,6 +116,12 @@ namespace CollegeManagementSystem
             {
                 Application.Exit();
             }
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            FormRegister formRegister = new FormRegister();
+            formRegister.Show();
         }
     }
 }

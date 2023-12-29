@@ -1,5 +1,4 @@
-﻿USE [CollegeDB]
-GO
+﻿GO
 
 INSERT INTO [dbo].[NewAdmission]
            ([fullName]
@@ -14,7 +13,7 @@ INSERT INTO [dbo].[NewAdmission]
            ,[duration]
            ,[addresss])
      VALUES
-           ('Demo User',
+           ('Demo Student',
 		   'Mother Demo',
 		   'Male',
 		   '21 de dezembro de 1975',
@@ -24,5 +23,46 @@ INSERT INTO [dbo].[NewAdmission]
            'R',
            'AEMS',
            '2020-2023',
-           'R. Mário Sacramento')
+           'R. Mário Sacramento');
+
+INSERT INTO [dbo].[Fees]
+			([NAID],
+			[fees])
+		VALUES
+			(1,
+			10000);
+
+INSERT INTO [dbo].[Teachers]
+           ([fullName]
+           ,[motherName]
+           ,[gender]
+           ,[dateOfBirth]
+           ,[mobileNumber]
+           ,[email]
+           ,[semester]
+           ,[programmingLanguage]
+           ,[duration]
+           ,[addresss])
+     VALUES
+           ('Demo Teacher',
+		   'Mother Demo',
+		   'Male',
+		   '13 de abril de 1963',
+           900000123,
+           'demot@demo.at',
+           '4th Semester',
+           'Kotlin',
+           '2021-2024',
+           'R. Mário Sacramento');
+
+INSERT INTO [dbo].[UsersLogin]
+           ([username]
+           ,[password]
+           ,[fullName]
+           )
+     VALUES
+           ('admin',
+		   'admin',
+		   'Demo User'
+		   );
 GO

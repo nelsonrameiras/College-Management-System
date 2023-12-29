@@ -58,6 +58,8 @@
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.registerButton = new System.Windows.Forms.Button();
+            this.heyLabel = new System.Windows.Forms.Label();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -97,6 +99,7 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.loginPanel.Controls.Add(this.registerButton);
             this.loginPanel.Controls.Add(this.loginButton);
             this.loginPanel.Controls.Add(this.passwordTextBox);
             this.loginPanel.Controls.Add(this.usernameTextBox);
@@ -112,7 +115,7 @@
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.loginButton.Location = new System.Drawing.Point(124, 134);
+            this.loginButton.Location = new System.Drawing.Point(39, 135);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(90, 31);
             this.loginButton.TabIndex = 6;
@@ -330,6 +333,29 @@
             this.exitSoftwareToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.exitSoftwareToolStripMenuItem.Click += new System.EventHandler(this.exitSoftwareToolStripMenuItem_Click);
             // 
+            // registerButton
+            // 
+            this.registerButton.BackColor = System.Drawing.Color.Crimson;
+            this.registerButton.Location = new System.Drawing.Point(208, 135);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(90, 31);
+            this.registerButton.TabIndex = 7;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // heyLabel
+            // 
+            this.heyLabel.AutoSize = true;
+            this.heyLabel.BackColor = System.Drawing.Color.White;
+            this.heyLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.heyLabel.Font = new System.Drawing.Font("Montserrat", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heyLabel.Location = new System.Drawing.Point(937, 28);
+            this.heyLabel.Name = "heyLabel";
+            this.heyLabel.Size = new System.Drawing.Size(82, 39);
+            this.heyLabel.TabIndex = 5;
+            this.heyLabel.Text = "Hey!";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -337,6 +363,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1256, 634);
+            this.Controls.Add(this.heyLabel);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.titleLabel3);
@@ -391,6 +418,8 @@
         private System.Windows.Forms.ToolStripMenuItem addProfessorInformationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem teachersIndividualDetailsToolStripMenuItem;
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Label heyLabel;
     }
 }
 

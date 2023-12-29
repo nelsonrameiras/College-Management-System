@@ -86,5 +86,24 @@ namespace CollegeManagementSystem
             durationYearComboBox.Text = "-- Choose an Option --";
             addressRichTextBox.Clear();
         }
+
+        private void FormNewTeacher_Load(object sender, EventArgs e)
+        {
+            SqlConnection cnn = new SqlConnection();
+            cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = cnn;
+
+            cmd.CommandText = "SELECT MAX(tid) FROM Teachers";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataSet dataset = new DataSet();
+            adapter.Fill(dataset);
+
+            Int64 registrationNumber = Convert.ToInt64(dataset.Tables[0].Rows[0][0]);
+            tIdPlaceHolderLabel.Text = (registrationNumber + 1).ToString();
+
+            cnn.Close();
+        }
     }
 }
