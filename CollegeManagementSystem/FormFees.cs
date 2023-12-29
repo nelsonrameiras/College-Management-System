@@ -21,8 +21,10 @@ namespace CollegeManagementSystem
 
         private void registrationNumberTextBox_TextChanged(object sender, EventArgs e)
         {
-            
-            if(registrationNumberTextBox.Text != "")
+            feesTextBox.Visible = true;
+            feesPlaceHolderLabel.Visible = false;
+
+            if (registrationNumberTextBox.Text != "")
             { 
                 SqlConnection cnn = new SqlConnection();
                 cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
@@ -61,55 +63,82 @@ namespace CollegeManagementSystem
                 durationPlaceHolderLabel.Text = "_________________________________";
                 feesTextBox.Text = "";
             }
+
+            SqlConnection cnn2 = new SqlConnection();
+            cnn2.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+            SqlCommand cmd2 = new SqlCommand();
+            cmd2.Connection = cnn2;
+
+            cmd2.CommandText = $"SELECT * FROM Fees WHERE NAID = '{registrationNumberTextBox.Text}'";
+
+            SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+            DataSet dataset2 = new DataSet();
+            adapter2.Fill(dataset2);
+
+            if (dataset2.Tables[0].Rows.Count != 0 && registrationNumberTextBox.Text != "")
+            {
+                feesTextBox.Visible = false;
+                feesPlaceHolderLabel.Text = $"{dataset2.Tables[0].Rows[0][2]}";
+                feesPlaceHolderLabel.Visible = true;
+            }
+            else
+            {
+                feesTextBox.Visible = true;
+                feesPlaceHolderLabel.Text = $"_________________________________";
+                feesPlaceHolderLabel.Visible = false;
+            }
+
+           
         }
 
         private void submitFeesButton_Click(object sender, EventArgs e)
         {
-
-            SqlConnection cnn = new SqlConnection();
-            cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cnn;
-
-            cmd.CommandText = $"SELECT * FROM Fees WHERE NAID = "+registrationNumberTextBox.Text+"";
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataSet dataset = new DataSet();
-            adapter.Fill(dataset);
-
-            if (dataset.Tables[0].Rows.Count == 0)
+            if(registrationNumberTextBox.Text != "")
             {
-                SqlConnection cnn2 = new SqlConnection();
-                cnn2.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
-                SqlCommand cmd2 = new SqlCommand();
-                cmd2.Connection = cnn2;
+                SqlConnection cnn = new SqlConnection();
+                cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = cnn;
 
-                cmd2.CommandText = $"INSERT INTO Fees (NAID, fees) VALUES ({registrationNumberTextBox.Text}," +
-                    $"{feesTextBox.Text})";
+                cmd.CommandText = $"SELECT * FROM Fees WHERE NAID = " + registrationNumberTextBox.Text + "";
 
-                SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
-                DataSet dataset2 = new DataSet();
-                adapter2.Fill(dataset2);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset);
 
-                if (MessageBox.Show("The fee submition was successful.", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                if (dataset.Tables[0].Rows.Count == 0 && feesTextBox.Text != "")
                 {
-                    registrationNumberTextBox.Text = "";
-                    fullNamePlaceHolderLabel.Text = "_________________________________";
-                    motherNamePlaceHolderLabel.Text = "_________________________________";
-                    durationPlaceHolderLabel.Text = "_________________________________";
-                    feesTextBox.Text = "";
+                    SqlConnection cnn2 = new SqlConnection();
+                    cnn2.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
+                    SqlCommand cmd2 = new SqlCommand();
+                    cmd2.Connection = cnn2;
+
+                    cmd2.CommandText = $"INSERT INTO Fees (NAID, fees) VALUES ({registrationNumberTextBox.Text}," +
+                        $"{feesTextBox.Text})";
+
+                    SqlDataAdapter adapter2 = new SqlDataAdapter(cmd2);
+                    DataSet dataset2 = new DataSet();
+                    adapter2.Fill(dataset2);
+
+                    if (MessageBox.Show("The fee submition was successful.", "Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk) == DialogResult.OK)
+                    {
+                        registrationNumberTextBox.Text = "";
+                        fullNamePlaceHolderLabel.Text = "_________________________________";
+                        motherNamePlaceHolderLabel.Text = "_________________________________";
+                        durationPlaceHolderLabel.Text = "_________________________________";
+                        feesTextBox.Text = "";
+                    }
+
+                    cnn2.Close();
+                }
+                else
+                {
+                    MessageBox.Show("This pupil's fees have already been submitted or you did not enter any fees.", "Already Submitted or no entered Fees.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                cnn2.Close();
-            }
-            else
-            {
-                MessageBox.Show("This pupil's fees have already been submitted.","Already Submitted.",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            
-            cnn.Close();
-            
+                cnn.Close();
+            }  
         }
     }
 }

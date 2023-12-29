@@ -61,7 +61,8 @@ namespace CollegeManagementSystem
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cnn;
 
-                    cmd.CommandText = $"DELETE FROM NewAdmission WHERE NAID = '{registrationIdTextBox.Text}'";
+                    cmd.CommandText = $"DELETE FROM NewAdmission WHERE NAID = '{registrationIdTextBox.Text}'; " +
+                        $"DELETE FROM Fees WHERE NAID = '{registrationIdTextBox.Text}';";
 
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataSet dataset = new DataSet();

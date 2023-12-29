@@ -39,6 +39,8 @@ namespace CollegeManagementSystem
             studentListComboBox.SelectedIndex = -1;
             fromSemesterUpgradeComboBox.SelectedIndex = -1;
             fromSemesterUpgradeComboBox.Text = "-- Choose an Option --";
+            toSemesterUpgradeComboBox.SelectedIndex = -1;
+            toSemesterUpgradeComboBox.Text = "-- Choose an Option --";
             specificStudentRadioButton.Checked = false;
 
             cnn.Close();
@@ -97,7 +99,7 @@ namespace CollegeManagementSystem
                     MessageBox.Show("Upgrade Canceled.", "Canceled.", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
+            FormUpgradeSemester_Load(sender, e);
         }
 
         private void studentListComboBox_SelectedIndexChanged(object sender, EventArgs e)

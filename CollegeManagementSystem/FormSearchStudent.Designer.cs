@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 23);
+            this.label1.Location = new System.Drawing.Point(210, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(440, 66);
             this.label1.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // registrationNumberTextBox
             // 
-            this.registrationNumberTextBox.Location = new System.Drawing.Point(390, 105);
+            this.registrationNumberTextBox.Location = new System.Drawing.Point(453, 107);
             this.registrationNumberTextBox.Name = "registrationNumberTextBox";
             this.registrationNumberTextBox.Size = new System.Drawing.Size(231, 27);
             this.registrationNumberTextBox.TabIndex = 3;
@@ -97,7 +97,7 @@
             this.studentsDataGridView.Location = new System.Drawing.Point(33, 233);
             this.studentsDataGridView.Name = "studentsDataGridView";
             this.studentsDataGridView.ReadOnly = true;
-            this.studentsDataGridView.Size = new System.Drawing.Size(588, 254);
+            this.studentsDataGridView.Size = new System.Drawing.Size(752, 254);
             this.studentsDataGridView.TabIndex = 5;
             // 
             // searchAllRadioButton
@@ -127,7 +127,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(654, 511);
+            this.ClientSize = new System.Drawing.Size(818, 511);
             this.Controls.Add(this.searchOnlyWithFeesRadioButton);
             this.Controls.Add(this.searchAllRadioButton);
             this.Controls.Add(this.studentsDataGridView);

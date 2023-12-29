@@ -42,6 +42,7 @@
             this.feesTextBox = new System.Windows.Forms.TextBox();
             this.submitFeesButton = new System.Windows.Forms.Button();
             this.warningLabel = new System.Windows.Forms.Label();
+            this.feesPlaceHolderLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -164,12 +165,23 @@
             this.warningLabel.Text = "That NAID isn\'t registered.";
             this.warningLabel.Visible = false;
             // 
+            // feesPlaceHolderLabel
+            // 
+            this.feesPlaceHolderLabel.AutoSize = true;
+            this.feesPlaceHolderLabel.Location = new System.Drawing.Point(250, 409);
+            this.feesPlaceHolderLabel.Name = "feesPlaceHolderLabel";
+            this.feesPlaceHolderLabel.Size = new System.Drawing.Size(274, 22);
+            this.feesPlaceHolderLabel.TabIndex = 13;
+            this.feesPlaceHolderLabel.Text = "_________________________________";
+            this.feesPlaceHolderLabel.Visible = false;
+            // 
             // FormFees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(570, 501);
+            this.Controls.Add(this.feesPlaceHolderLabel);
             this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.submitFeesButton);
             this.Controls.Add(this.feesTextBox);
@@ -210,5 +222,6 @@
         private System.Windows.Forms.TextBox feesTextBox;
         private System.Windows.Forms.Button submitFeesButton;
         private System.Windows.Forms.Label warningLabel;
+        private System.Windows.Forms.Label feesPlaceHolderLabel;
     }
 }

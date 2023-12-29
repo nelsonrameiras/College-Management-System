@@ -127,9 +127,10 @@
             // specificStudentRadioButton
             // 
             this.specificStudentRadioButton.AutoSize = true;
+            this.specificStudentRadioButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.specificStudentRadioButton.Location = new System.Drawing.Point(66, 312);
             this.specificStudentRadioButton.Name = "specificStudentRadioButton";
-            this.specificStudentRadioButton.Size = new System.Drawing.Size(166, 26);
+            this.specificStudentRadioButton.Size = new System.Drawing.Size(169, 26);
             this.specificStudentRadioButton.TabIndex = 8;
             this.specificStudentRadioButton.TabStop = true;
             this.specificStudentRadioButton.Text = "Specific Student:";

@@ -23,8 +23,10 @@ namespace CollegeManagementSystem
         {
             string name = fullNameTextBox.Text;
             string mname = motherNameTextBox.Text;
+
             string gender = "";
             bool isChecked = maleGenderRadioButton.Checked;
+        
             if (isChecked)
             {
                 gender = maleGenderRadioButton.Text;
@@ -33,8 +35,12 @@ namespace CollegeManagementSystem
             {
                 gender = femaleGenderRadioButton.Text;
             }
+
             string dateOfBirth = dateOfBirthDateTimePicker.Text;
-            long mobileNumber = Convert.ToInt64(mobileNumberTextBox.Text);
+
+            long mobileNumber;
+            bool successParseLong = long.TryParse(mobileNumberTextBox.Text, out mobileNumber);
+
             string emailId = emailIdTextBox.Text;
             string semester = semesterComboBox.Text;
             string programmingLanguage = programmingComboBox.Text;
@@ -42,7 +48,7 @@ namespace CollegeManagementSystem
             string address = addressRichTextBox.Text;
 
             if(name == "" || mname == "" || (maleGenderRadioButton.Checked == false && 
-               femaleGenderRadioButton.Checked == false) || dateOfBirthDateTimePicker.Checked == false ||
+               femaleGenderRadioButton.Checked == false) || dateOfBirthDateTimePicker.Checked == false || !successParseLong ||
                emailId == "" || semesterComboBox.SelectedIndex == -1 || programmingComboBox.SelectedIndex == -1 || 
                durationYearComboBox.SelectedIndex == -1 || address == "") 
             {

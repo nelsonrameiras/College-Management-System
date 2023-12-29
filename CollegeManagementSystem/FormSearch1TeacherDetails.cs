@@ -20,7 +20,9 @@ namespace CollegeManagementSystem
         }
 
         private void showDetailsButton_Click(object sender, EventArgs e)
-        { 
+        {
+            if (registrationIdTextBox.Text != "")
+            {
                 SqlConnection cnn = new SqlConnection();
                 cnn.ConnectionString = ConfigurationManager.ConnectionStrings["Database"].ConnectionString;
                 SqlCommand cmd = new SqlCommand();
@@ -52,6 +54,14 @@ namespace CollegeManagementSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     resetButton_Click(sender, e);
                 }
+            }
+            else
+            {
+                MessageBox.Show("No Student Registration ID has been entered. Please, enter a valid NAID.",
+                        "Invalid Registration ID",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                resetButton_Click(sender, e);
+            }
         }
 
         private void resetButton_Click(object sender, EventArgs e)
