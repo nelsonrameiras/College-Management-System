@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegister));
             this.loginPanel = new System.Windows.Forms.Panel();
+            this.requerimentsButton = new System.Windows.Forms.Button();
             this.fullNameTextBox = new System.Windows.Forms.TextBox();
             this.fullNameLabel = new System.Windows.Forms.Label();
             this.registerButton = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordLoginLabel = new System.Windows.Forms.Label();
             this.usernameLoginLabel = new System.Windows.Forms.Label();
-            this.requerimentsButton = new System.Windows.Forms.Button();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,17 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(334, 252);
             this.loginPanel.TabIndex = 4;
+            // 
+            // requerimentsButton
+            // 
+            this.requerimentsButton.BackColor = System.Drawing.Color.MediumOrchid;
+            this.requerimentsButton.Location = new System.Drawing.Point(92, 174);
+            this.requerimentsButton.Name = "requerimentsButton";
+            this.requerimentsButton.Size = new System.Drawing.Size(147, 31);
+            this.requerimentsButton.TabIndex = 10;
+            this.requerimentsButton.Text = "Requeriments";
+            this.requerimentsButton.UseVisualStyleBackColor = false;
+            this.requerimentsButton.Click += new System.EventHandler(this.requerimentsButton_Click);
             // 
             // fullNameTextBox
             // 
@@ -146,17 +157,6 @@
             this.usernameLoginLabel.TabIndex = 0;
             this.usernameLoginLabel.Text = "Username:";
             // 
-            // requerimentsButton
-            // 
-            this.requerimentsButton.BackColor = System.Drawing.Color.MediumOrchid;
-            this.requerimentsButton.Location = new System.Drawing.Point(92, 174);
-            this.requerimentsButton.Name = "requerimentsButton";
-            this.requerimentsButton.Size = new System.Drawing.Size(147, 31);
-            this.requerimentsButton.TabIndex = 10;
-            this.requerimentsButton.Text = "Requeriments";
-            this.requerimentsButton.UseVisualStyleBackColor = false;
-            this.requerimentsButton.Click += new System.EventHandler(this.requerimentsButton_Click);
-            // 
             // FormRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -167,6 +167,7 @@
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.loginPanel);
             this.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
