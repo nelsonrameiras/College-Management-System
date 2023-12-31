@@ -123,9 +123,9 @@
             this.applicationDeadline1Label.AutoSize = true;
             this.applicationDeadline1Label.Location = new System.Drawing.Point(431, 381);
             this.applicationDeadline1Label.Name = "applicationDeadline1Label";
-            this.applicationDeadline1Label.Size = new System.Drawing.Size(286, 22);
+            this.applicationDeadline1Label.Size = new System.Drawing.Size(261, 22);
             this.applicationDeadline1Label.TabIndex = 8;
-            this.applicationDeadline1Label.Text = "Students can apply to our College";
+            this.applicationDeadline1Label.Text = "Pupils can apply to our College";
             // 
             // applicationDeadline2Label
             // 

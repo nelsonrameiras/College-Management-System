@@ -77,7 +77,11 @@ namespace CollegeManagementSystem
             }
             else if (((wFeesIsChecked) && registrationNumberTextBox.Text != ""))
             {
-                cmd.CommandText = $"SELECT * From NewAdmission WHERE NAID = {registrationNumberTextBox.Text}";
+                cmd.CommandText = $"SELECT NewAdmission.NAID, NewAdmission.fullName, NewAdmission.motherName," +
+                               $"NewAdmission.gender, NewAdmission.dateOfBirth, NewAdmission.mobileNumber, NewAdmission.email," +
+                               $"NewAdmission.semester, NewAdmission.programmingLanguage, NewAdmission.schoolName," +
+                               $"NewAdmission.duration, NewAdmission.addresss, Fees.fees FROM NewAdmission INNER JOIN Fees " +
+                               $"ON NewAdmission.NAID = Fees.NAID WHERE NewAdmission.NAID = {registrationNumberTextBox.Text}";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataSet dataset = new DataSet();

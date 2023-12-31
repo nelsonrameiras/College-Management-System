@@ -53,7 +53,7 @@ namespace CollegeManagementSystem
 
             if (dataset2.Tables[0].Rows.Count != 0)
             {
-                if (MessageBox.Show("Are you sure you want to Disenroll this Student?", "Sure?",
+                if (MessageBox.Show("Are you sure you want to Disenroll this Pupil?", "Are you sure?",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     SqlConnection cnn = new SqlConnection();

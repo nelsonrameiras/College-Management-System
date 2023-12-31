@@ -167,6 +167,12 @@
     <Compile Include="FormSearchStudent.Designer.cs">
       <DependentUpon>FormSearchStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchTeacher.Designer.cs">
+      <DependentUpon>FormSearchTeacher.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUpgradeSemester.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchStudent.resx">
       <DependentUpon>FormSearchStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchTeacher.resx">
+      <DependentUpon>FormSearchTeacher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUpgradeSemester.resx">
       <DependentUpon>FormUpgradeSemester.cs</DependentUpon>

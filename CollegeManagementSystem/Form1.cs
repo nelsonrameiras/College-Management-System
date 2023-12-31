@@ -109,10 +109,19 @@ namespace CollegeManagementSystem
             formAbout.Show();
         }
 
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to close this Software? Any unsaved data shall be lost.",
+                "Are you certain?", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+        }
+
         private void exitSoftwareToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Are you sure you want to close this Software? Any unsaved data shall be lost.",
-                "Are you certain",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
+                "Are you certain?",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
             {
                 Application.Exit();
             }
@@ -122,6 +131,12 @@ namespace CollegeManagementSystem
         {
             FormRegister formRegister = new FormRegister();
             formRegister.Show();
+        }
+
+        private void searchProfessorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormSearchTeacher formSearchTeacher = new FormSearchTeacher();
+            formSearchTeacher.Show();
         }
     }
 }

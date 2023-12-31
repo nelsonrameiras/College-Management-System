@@ -74,17 +74,17 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(215, 12);
+            this.titleLabel.Location = new System.Drawing.Point(234, 12);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(549, 40);
+            this.titleLabel.Size = new System.Drawing.Size(505, 40);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "Search Student\'s Individual Details";
+            this.titleLabel.Text = "Search Pupil\'s Individual Details";
             // 
             // registrationIdLabel
             // 
             this.registrationIdLabel.AutoSize = true;
             this.registrationIdLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registrationIdLabel.Location = new System.Drawing.Point(218, 85);
+            this.registrationIdLabel.Location = new System.Drawing.Point(237, 82);
             this.registrationIdLabel.Name = "registrationIdLabel";
             this.registrationIdLabel.Size = new System.Drawing.Size(137, 22);
             this.registrationIdLabel.TabIndex = 2;
@@ -92,7 +92,7 @@
             // 
             // registrationIdTextBox
             // 
-            this.registrationIdTextBox.Location = new System.Drawing.Point(427, 82);
+            this.registrationIdTextBox.Location = new System.Drawing.Point(427, 79);
             this.registrationIdTextBox.Name = "registrationIdTextBox";
             this.registrationIdTextBox.Size = new System.Drawing.Size(165, 27);
             this.registrationIdTextBox.TabIndex = 3;
@@ -109,9 +109,10 @@
             // fullNameLabel
             // 
             this.fullNameLabel.AutoSize = true;
+            this.fullNameLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullNameLabel.Location = new System.Drawing.Point(36, 150);
             this.fullNameLabel.Name = "fullNameLabel";
-            this.fullNameLabel.Size = new System.Drawing.Size(97, 22);
+            this.fullNameLabel.Size = new System.Drawing.Size(100, 22);
             this.fullNameLabel.TabIndex = 8;
             this.fullNameLabel.Text = "Full Name:";
             // 
@@ -127,9 +128,10 @@
             // emailIdLabel
             // 
             this.emailIdLabel.AutoSize = true;
+            this.emailIdLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailIdLabel.Location = new System.Drawing.Point(423, 340);
             this.emailIdLabel.Name = "emailIdLabel";
-            this.emailIdLabel.Size = new System.Drawing.Size(60, 22);
+            this.emailIdLabel.Size = new System.Drawing.Size(62, 22);
             this.emailIdLabel.TabIndex = 20;
             this.emailIdLabel.Text = "Email:";
             // 
@@ -145,9 +147,10 @@
             // mobileNumberLabel
             // 
             this.mobileNumberLabel.AutoSize = true;
+            this.mobileNumberLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mobileNumberLabel.Location = new System.Drawing.Point(36, 340);
             this.mobileNumberLabel.Name = "mobileNumberLabel";
-            this.mobileNumberLabel.Size = new System.Drawing.Size(141, 22);
+            this.mobileNumberLabel.Size = new System.Drawing.Size(144, 22);
             this.mobileNumberLabel.TabIndex = 22;
             this.mobileNumberLabel.Text = "Mobile Number:";
             // 
@@ -163,9 +166,10 @@
             // dateOfBirthLabel
             // 
             this.dateOfBirthLabel.AutoSize = true;
+            this.dateOfBirthLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateOfBirthLabel.Location = new System.Drawing.Point(36, 291);
             this.dateOfBirthLabel.Name = "dateOfBirthLabel";
-            this.dateOfBirthLabel.Size = new System.Drawing.Size(122, 22);
+            this.dateOfBirthLabel.Size = new System.Drawing.Size(126, 22);
             this.dateOfBirthLabel.TabIndex = 24;
             this.dateOfBirthLabel.Text = "Date Of Birth:";
             // 
@@ -181,6 +185,7 @@
             // genderLabel
             // 
             this.genderLabel.AutoSize = true;
+            this.genderLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.genderLabel.Location = new System.Drawing.Point(36, 239);
             this.genderLabel.Name = "genderLabel";
             this.genderLabel.Size = new System.Drawing.Size(75, 22);
@@ -199,9 +204,10 @@
             // motherNameLabel
             // 
             this.motherNameLabel.AutoSize = true;
+            this.motherNameLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.motherNameLabel.Location = new System.Drawing.Point(36, 192);
             this.motherNameLabel.Name = "motherNameLabel";
-            this.motherNameLabel.Size = new System.Drawing.Size(139, 22);
+            this.motherNameLabel.Size = new System.Drawing.Size(141, 22);
             this.motherNameLabel.TabIndex = 28;
             this.motherNameLabel.Text = "Mother\'s Name:";
             // 
@@ -217,9 +223,10 @@
             // programmingLanguageLabel
             // 
             this.programmingLanguageLabel.AutoSize = true;
+            this.programmingLanguageLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programmingLanguageLabel.Location = new System.Drawing.Point(423, 192);
             this.programmingLanguageLabel.Name = "programmingLanguageLabel";
-            this.programmingLanguageLabel.Size = new System.Drawing.Size(130, 22);
+            this.programmingLanguageLabel.Size = new System.Drawing.Size(131, 22);
             this.programmingLanguageLabel.TabIndex = 38;
             this.programmingLanguageLabel.Text = "Programming:";
             // 
@@ -235,9 +242,10 @@
             // schoolNameLabel
             // 
             this.schoolNameLabel.AutoSize = true;
+            this.schoolNameLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.schoolNameLabel.Location = new System.Drawing.Point(423, 239);
             this.schoolNameLabel.Name = "schoolNameLabel";
-            this.schoolNameLabel.Size = new System.Drawing.Size(122, 22);
+            this.schoolNameLabel.Size = new System.Drawing.Size(124, 22);
             this.schoolNameLabel.TabIndex = 36;
             this.schoolNameLabel.Text = "School Name:";
             // 
@@ -253,9 +261,10 @@
             // durationLabel
             // 
             this.durationLabel.AutoSize = true;
+            this.durationLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durationLabel.Location = new System.Drawing.Point(423, 291);
             this.durationLabel.Name = "durationLabel";
-            this.durationLabel.Size = new System.Drawing.Size(86, 22);
+            this.durationLabel.Size = new System.Drawing.Size(87, 22);
             this.durationLabel.TabIndex = 34;
             this.durationLabel.Text = "Duration:";
             // 
@@ -271,6 +280,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.Location = new System.Drawing.Point(36, 398);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(81, 22);
@@ -289,6 +299,7 @@
             // semesterLabel
             // 
             this.semesterLabel.AutoSize = true;
+            this.semesterLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.semesterLabel.Location = new System.Drawing.Point(423, 150);
             this.semesterLabel.Name = "semesterLabel";
             this.semesterLabel.Size = new System.Drawing.Size(93, 22);
@@ -298,7 +309,7 @@
             // showDetailsButton
             // 
             this.showDetailsButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.showDetailsButton.Location = new System.Drawing.Point(652, 79);
+            this.showDetailsButton.Location = new System.Drawing.Point(652, 74);
             this.showDetailsButton.Name = "showDetailsButton";
             this.showDetailsButton.Size = new System.Drawing.Size(87, 35);
             this.showDetailsButton.TabIndex = 40;
@@ -356,7 +367,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormSearch1StudentDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Search Student\'s Individual Details";
+            this.Text = "Search Pupil\'s Individual Details";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

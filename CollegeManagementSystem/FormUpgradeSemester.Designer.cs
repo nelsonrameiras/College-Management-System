@@ -44,7 +44,7 @@
             // semesterCalendarPictureBox
             // 
             this.semesterCalendarPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("semesterCalendarPictureBox.Image")));
-            this.semesterCalendarPictureBox.Location = new System.Drawing.Point(180, 12);
+            this.semesterCalendarPictureBox.Location = new System.Drawing.Point(185, 12);
             this.semesterCalendarPictureBox.Name = "semesterCalendarPictureBox";
             this.semesterCalendarPictureBox.Size = new System.Drawing.Size(278, 182);
             this.semesterCalendarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -55,11 +55,11 @@
             // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.Location = new System.Drawing.Point(134, 211);
+            this.titleLabel.Location = new System.Drawing.Point(143, 217);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(388, 22);
+            this.titleLabel.Size = new System.Drawing.Size(365, 22);
             this.titleLabel.TabIndex = 1;
-            this.titleLabel.Text = "Select Semester for Old Students\' Admission:";
+            this.titleLabel.Text = "Select Semester for Old Pupils\' Admission:";
             // 
             // fromSemesterUpgradeComboBox
             // 

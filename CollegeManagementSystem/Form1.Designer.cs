@@ -60,6 +60,7 @@
             this.exitSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.heyLabel = new System.Windows.Forms.Label();
+            this.searchProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -288,6 +289,7 @@
             // 
             this.professorsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProfessorInformationToolStripMenuItem,
+            this.searchProfessorToolStripMenuItem,
             this.teachersIndividualDetailsToolStripMenuItem});
             this.professorsToolStripMenuItem.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.professorsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("professorsToolStripMenuItem.Image")));
@@ -356,6 +358,13 @@
             this.heyLabel.TabIndex = 5;
             this.heyLabel.Text = "Hey!";
             // 
+            // searchProfessorToolStripMenuItem
+            // 
+            this.searchProfessorToolStripMenuItem.Name = "searchProfessorToolStripMenuItem";
+            this.searchProfessorToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.searchProfessorToolStripMenuItem.Text = "Search Professor";
+            this.searchProfessorToolStripMenuItem.Click += new System.EventHandler(this.searchProfessorToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -376,6 +385,7 @@
             this.Name = "Form1";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
@@ -420,6 +430,7 @@
         private System.DirectoryServices.DirectoryEntry directoryEntry1;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label heyLabel;
+        private System.Windows.Forms.ToolStripMenuItem searchProfessorToolStripMenuItem;
     }
 }
 
