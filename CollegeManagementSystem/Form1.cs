@@ -23,6 +23,27 @@ namespace CollegeManagementSystem
         {
             menuStrip.Visible = false;
             heyLabel.Visible = false;
+
+            // center form on Load, so as to make it always default to the center of the screen on any system.
+            loginPanel.Location = new Point(
+            this.ClientSize.Width / 2 - loginPanel.Size.Width / 2,
+            3 * (this.ClientSize.Height / 8) - loginPanel.Size.Height / 2);
+            loginPanel.Anchor = AnchorStyles.None;
+
+            titleLabel1.Location = new Point(
+            this.ClientSize.Width / 8,
+            5* (this.ClientSize.Height / 8) - titleLabel1.Size.Height / 2);
+            titleLabel1.Anchor = AnchorStyles.None;
+
+            titleLabel2.Location = new Point(
+            this.ClientSize.Width / 8 + titleLabel1.Size.Width,
+            6* (this.ClientSize.Height / 8) - titleLabel2.Size.Height / 2);
+            titleLabel2.Anchor = AnchorStyles.None;
+
+            titleLabel3.Location = new Point(
+             this.ClientSize.Width / 8 + titleLabel1.Size.Width + titleLabel2.Size.Width,
+            7 * (this.ClientSize.Height / 8) - titleLabel3.Size.Height / 2);
+            titleLabel3.Anchor = AnchorStyles.None;
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -137,6 +158,18 @@ namespace CollegeManagementSystem
         {
             FormSearchTeacher formSearchTeacher = new FormSearchTeacher();
             formSearchTeacher.Show();
+        }
+
+        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPasswordCheckBox.Checked)
+            {
+                passwordTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                passwordTextBox.PasswordChar = '*';
+            }
         }
     }
 }

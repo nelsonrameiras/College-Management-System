@@ -58,5 +58,17 @@ namespace CollegeManagementSystem
                     "Furthermore, all fields must be filled.",
                                     "Requirements", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void showPasswordCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (showPasswordCheckBox.Checked)
+            {
+                passwordTextBox.PasswordChar = '\0';
+            }
+            else
+            {
+                passwordTextBox.PasswordChar = '*';
+            }
+        }
     }
 }

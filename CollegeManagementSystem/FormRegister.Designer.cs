@@ -40,6 +40,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.passwordLoginLabel = new System.Windows.Forms.Label();
             this.usernameLoginLabel = new System.Windows.Forms.Label();
+            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.loginPanel.Controls.Add(this.showPasswordCheckBox);
             this.loginPanel.Controls.Add(this.requerimentsButton);
             this.loginPanel.Controls.Add(this.fullNameTextBox);
             this.loginPanel.Controls.Add(this.fullNameLabel);
@@ -57,15 +59,15 @@
             this.loginPanel.Controls.Add(this.pictureBox1);
             this.loginPanel.Controls.Add(this.passwordLoginLabel);
             this.loginPanel.Controls.Add(this.usernameLoginLabel);
-            this.loginPanel.Location = new System.Drawing.Point(126, 109);
+            this.loginPanel.Location = new System.Drawing.Point(85, 109);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(334, 252);
+            this.loginPanel.Size = new System.Drawing.Size(417, 252);
             this.loginPanel.TabIndex = 4;
             // 
             // requerimentsButton
             // 
             this.requerimentsButton.BackColor = System.Drawing.Color.MediumOrchid;
-            this.requerimentsButton.Location = new System.Drawing.Point(92, 174);
+            this.requerimentsButton.Location = new System.Drawing.Point(234, 174);
             this.requerimentsButton.Name = "requerimentsButton";
             this.requerimentsButton.Size = new System.Drawing.Size(147, 31);
             this.requerimentsButton.TabIndex = 10;
@@ -76,7 +78,7 @@
             // fullNameTextBox
             // 
             this.fullNameTextBox.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullNameTextBox.Location = new System.Drawing.Point(165, 102);
+            this.fullNameTextBox.Location = new System.Drawing.Point(248, 102);
             this.fullNameTextBox.Name = "fullNameTextBox";
             this.fullNameTextBox.Size = new System.Drawing.Size(133, 27);
             this.fullNameTextBox.TabIndex = 9;
@@ -84,16 +86,17 @@
             // fullNameLabel
             // 
             this.fullNameLabel.AutoSize = true;
+            this.fullNameLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fullNameLabel.Location = new System.Drawing.Point(35, 105);
             this.fullNameLabel.Name = "fullNameLabel";
-            this.fullNameLabel.Size = new System.Drawing.Size(97, 22);
+            this.fullNameLabel.Size = new System.Drawing.Size(100, 22);
             this.fullNameLabel.TabIndex = 8;
             this.fullNameLabel.Text = "Full Name:";
             // 
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.Color.DodgerBlue;
-            this.registerButton.Location = new System.Drawing.Point(122, 211);
+            this.registerButton.Location = new System.Drawing.Point(161, 211);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(90, 31);
             this.registerButton.TabIndex = 7;
@@ -104,7 +107,7 @@
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextBox.Location = new System.Drawing.Point(165, 137);
+            this.passwordTextBox.Location = new System.Drawing.Point(248, 137);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(133, 27);
@@ -113,7 +116,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Montserrat Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextBox.Location = new System.Drawing.Point(165, 67);
+            this.usernameTextBox.Location = new System.Drawing.Point(248, 67);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(133, 27);
             this.usernameTextBox.TabIndex = 4;
@@ -122,7 +125,7 @@
             // 
             this.loginLabel.AutoSize = true;
             this.loginLabel.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginLabel.Location = new System.Drawing.Point(95, 15);
+            this.loginLabel.Location = new System.Drawing.Point(134, 15);
             this.loginLabel.Name = "loginLabel";
             this.loginLabel.Size = new System.Drawing.Size(144, 37);
             this.loginLabel.TabIndex = 3;
@@ -132,7 +135,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(39, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,20 +145,34 @@
             // passwordLoginLabel
             // 
             this.passwordLoginLabel.AutoSize = true;
+            this.passwordLoginLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLoginLabel.Location = new System.Drawing.Point(35, 140);
             this.passwordLoginLabel.Name = "passwordLoginLabel";
-            this.passwordLoginLabel.Size = new System.Drawing.Size(94, 22);
+            this.passwordLoginLabel.Size = new System.Drawing.Size(95, 22);
             this.passwordLoginLabel.TabIndex = 1;
             this.passwordLoginLabel.Text = "Password:";
             // 
             // usernameLoginLabel
             // 
             this.usernameLoginLabel.AutoSize = true;
+            this.usernameLoginLabel.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLoginLabel.Location = new System.Drawing.Point(35, 67);
             this.usernameLoginLabel.Name = "usernameLoginLabel";
             this.usernameLoginLabel.Size = new System.Drawing.Size(100, 22);
             this.usernameLoginLabel.TabIndex = 0;
             this.usernameLoginLabel.Text = "Username:";
+            // 
+            // showPasswordCheckBox
+            // 
+            this.showPasswordCheckBox.AutoSize = true;
+            this.showPasswordCheckBox.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(39, 177);
+            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(161, 26);
+            this.showPasswordCheckBox.TabIndex = 11;
+            this.showPasswordCheckBox.Text = "Show Password";
+            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
             // FormRegister
             // 
@@ -192,5 +209,6 @@
         private System.Windows.Forms.TextBox fullNameTextBox;
         private System.Windows.Forms.Label fullNameLabel;
         private System.Windows.Forms.Button requerimentsButton;
+        private System.Windows.Forms.CheckBox showPasswordCheckBox;
     }
 }

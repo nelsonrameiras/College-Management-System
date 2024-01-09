@@ -54,13 +54,14 @@
             this.individualDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addProfessorInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.searchProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.teachersIndividualDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disenrollPupilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitSoftwareToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
             this.heyLabel = new System.Windows.Forms.Label();
-            this.searchProfessorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
             this.loginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -100,6 +101,7 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.Gainsboro;
+            this.loginPanel.Controls.Add(this.showPasswordCheckBox);
             this.loginPanel.Controls.Add(this.registerButton);
             this.loginPanel.Controls.Add(this.loginButton);
             this.loginPanel.Controls.Add(this.passwordTextBox);
@@ -110,7 +112,7 @@
             this.loginPanel.Controls.Add(this.usernameLoginLabel);
             this.loginPanel.Location = new System.Drawing.Point(505, 203);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(334, 178);
+            this.loginPanel.Size = new System.Drawing.Size(334, 207);
             this.loginPanel.TabIndex = 3;
             // 
             // registerButton
@@ -306,6 +308,13 @@
             this.addProfessorInformationToolStripMenuItem.Text = "Add Professor Information";
             this.addProfessorInformationToolStripMenuItem.Click += new System.EventHandler(this.addProfessorInformationToolStripMenuItem_Click);
             // 
+            // searchProfessorToolStripMenuItem
+            // 
+            this.searchProfessorToolStripMenuItem.Name = "searchProfessorToolStripMenuItem";
+            this.searchProfessorToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
+            this.searchProfessorToolStripMenuItem.Text = "Search Professor";
+            this.searchProfessorToolStripMenuItem.Click += new System.EventHandler(this.searchProfessorToolStripMenuItem_Click);
+            // 
             // teachersIndividualDetailsToolStripMenuItem
             // 
             this.teachersIndividualDetailsToolStripMenuItem.Name = "teachersIndividualDetailsToolStripMenuItem";
@@ -358,12 +367,16 @@
             this.heyLabel.TabIndex = 5;
             this.heyLabel.Text = "Hey!";
             // 
-            // searchProfessorToolStripMenuItem
+            // showPasswordCheckBox
             // 
-            this.searchProfessorToolStripMenuItem.Name = "searchProfessorToolStripMenuItem";
-            this.searchProfessorToolStripMenuItem.Size = new System.Drawing.Size(301, 26);
-            this.searchProfessorToolStripMenuItem.Text = "Search Professor";
-            this.searchProfessorToolStripMenuItem.Click += new System.EventHandler(this.searchProfessorToolStripMenuItem_Click);
+            this.showPasswordCheckBox.AutoSize = true;
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(39, 173);
+            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(161, 26);
+            this.showPasswordCheckBox.TabIndex = 8;
+            this.showPasswordCheckBox.Text = "Show Password";
+            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
             // Form1
             // 
@@ -431,6 +444,7 @@
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label heyLabel;
         private System.Windows.Forms.ToolStripMenuItem searchProfessorToolStripMenuItem;
+        private System.Windows.Forms.CheckBox showPasswordCheckBox;
     }
 }
 
